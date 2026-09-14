@@ -2,3 +2,6 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+html,body{
+  scrollbar-width: none;
+}
