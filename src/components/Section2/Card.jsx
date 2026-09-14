@@ -1,6 +1,6 @@
 const Cards = () => {
    return(
-     <div className=" shrink-0 h-80 p-6 w-75 flex flex-col justify-between rounded-2xl overflow-hidden bg-black border border-stone-200/80 shadow-md">
+     <div className=" shrink-0 h-80 p-6 min-w-75 flex flex-col justify-between rounded-2xl overflow-hidden bg-black border border-stone-200/80 shadow-md">
       <div>
         <h1 className=" font-bold text-2xl mb-3 underline mt-4 line-clamp-1 text-slate-100 ">Notes</h1>
         <h3 className=" font-semibold tracking-tight line-clamp-6 text-slate-400">

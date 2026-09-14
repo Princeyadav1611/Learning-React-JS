@@ -2,7 +2,7 @@ import Form from "./LeftContent.jsx";
 import Notes from "./RightContent.jsx";
 const Section2 = () => {
   return (
-  <div className="h-screen w-full bg-stone-100 p-2 gap-5 flex flex-col      min-[850px]:flex-row">
+  <div className="h-screen max-[850px]:h-auto w-full bg-stone-100 p-2 gap-5 flex flex-col min-[850px]:flex-row">
     <Form />
     <Notes />
   </div>)
