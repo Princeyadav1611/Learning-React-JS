@@ -1,7 +1,7 @@
 import RightCard from "./RightCard.jsx";
 const RightContent = ({ cards }) => {
   return (
-    <div className="h-full w-3/4 p-6 flex overflow-x-auto no-scrollbar flex-nowrap gap-10">
+    <div className="h-full min-[1000px]:w-3/4 p-6 flex overflow-x-auto no-scrollbar flex-nowrap gap-10">
       {cards.map((item, idx) => {
         return (
           <RightCard

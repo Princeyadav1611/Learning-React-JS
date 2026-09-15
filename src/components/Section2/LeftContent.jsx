@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const Form = () => {
+  const[title, setTitle] = useState("");
+  const[desc, setDesc] = useState("");
+   const[task, setTask] = useState([]);
+   const copyTask = [...task];
+
   return (
     <div className="flex flex-col justify-around">
       <h1 className=" items-center gap-2 flex p-6 pt-2 m-2 font-extrabold text-6xl">
@@ -27,13 +34,31 @@ const Form = () => {
         <input
           type="text"
           placeholder="EnterTitle of Your Note"
+          value={title}
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
           className="p-6 bg-stone-50 text-stone-900 placeholder-stone-400 border-stone-300 focus:border-stone-800 text-3xl font-bold m-1 rounded  border-2 "
         ></input>
         <textarea
+          value={desc}
+          onChange={(e) => {
+            setDesc(e.target.value);
+          }}
           placeholder="EnterTitle of Your Note"
           className=" h-100 bg-stone-50 text-stone-800 placeholder-stone-400 border-stone-300 focus:border-stone-300 p-6 text-xl font-medium m-1 rounded border-2 "
         ></textarea>
-        <button className="p-3 m-2 rounded bg-stone-900 hover:bg-black text-stone-100 cursor-pointer text-3xl font-extrabold ">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setTitle("");
+            setDesc("");
+            copyTask.push({title,desc});
+            setTask(copyTask);
+            console.log(task);
+          }}
+          className="p-3 m-2 active:scale-95 rounded bg-stone-900 hover:bg-black text-stone-100 cursor-pointer text-3xl font-extrabold "
+        >
           Add Note
         </button>
       </form>

@@ -1,6 +1,6 @@
 const LeftContent = () => {
   return (
-    <div className="  flex justify-between flex-col px-8 py-6 h-full w-1/4">
+    <div className="  flex justify-between flex-col px-8 py-6 h-full min-[1000px]:w-1/4">
       <div>
         <h3 className=" mb-6 text-4xl leading-13 font-extrabold">
           Prospective
