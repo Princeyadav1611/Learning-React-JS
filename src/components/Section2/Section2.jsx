@@ -65,7 +65,7 @@ const Section2 = () => {
         </button>
       </form>
     </div>
-    <Notes />
+    <Notes Data={task} />
   </div>)
 };
 export default Section2;

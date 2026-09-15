@@ -1,13 +1,10 @@
-const Cards = () => {
+const Cards = (props) => {
    return(
      <div className=" shrink-0 h-80 p-6 min-w-75 flex flex-col justify-between rounded-2xl overflow-hidden bg-black border border-stone-200/80 shadow-md">
       <div>
-        <h1 className=" font-bold text-2xl mb-3 underline mt-4 line-clamp-1 text-slate-100 ">Notes</h1>
+        <h1 className=" font-bold text-2xl mb-3 underline mt-4 line-clamp-1 text-slate-100 ">{props.title}</h1>
         <h3 className=" font-semibold tracking-tight line-clamp-6 text-slate-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-          mollitia suscipit excepturi reiciendis nostrum ipsam quo fugiat
-          veritatis sapiente sint nam incidunt amet numquam consequuntur dolor
-          vero expedita provident ullam.
+          {props.desc}
         </h3>
       </div>
       <button className="w-full rounded flex justify-center items-center gap-1 p-1 cursor-pointer active:scale-95 font-bold text-rose-400 hover:text-rose-300 hover:bg-rose-950/40">
